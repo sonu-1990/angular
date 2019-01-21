@@ -5,3 +5,16 @@ export class Users {
 
 }
 import { Users } from './users'
+
+app.component.ts
+app.module.ts
+template / templateUrl
+component -> view(template) (interpolation {{}} / property binding [])
+view(template) -> component (Event Binding () / Two-binding [()])
+ng generate component --spec=false(dont need a testing file) --is(inetranl style)
+
+What is the difference betweeen interpolation and property binding
+when you want to deal value which is never changed during runtime you need to use 
+interpolation 
+but id you want to change something during runtime then you must use property
+binding

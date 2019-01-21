@@ -1,0 +1,13 @@
+<h1>{{ pageTitle }}</h1>
+<h1>Interpolation</h1>
+<img src="{{ imageUrl }}" width="100px" height="100px"/>
+
+<h1>Property Binding</h1>
+<img [src]="imageUrl" width="100px" height="100px"/>
+<br/>
+<button [disabled]="btnStatus">Click me</button>
+<br/>
+<button (click) = "changeTitle()">Change Title</button><br/><br/>
+<input type="text"  [(ngModel)]="username"/>
+<h4>Welcome {{ username }}</h4>
+
