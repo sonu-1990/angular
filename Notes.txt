@@ -1,0 +1,7 @@
+ng new app
+cd app
+ng serve
+export class Users {
+
+}
+import { Users } from './users'
