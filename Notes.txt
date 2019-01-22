@@ -1,3 +1,21 @@
+Angular (Angularjs)
+1 > Based on javascript
+1 > It was MVC Based
+3 > Slow
+4 > Easy to setup
+5 > Controllers and scope
+
+Angular 2 and 4 (Angular)
+1 > Based on typescript
+2 > It is component Based
+3 > 5 Times Faster
+4 > Not easy to setup
+5 > Components
+
+node -v
+npm -v
+npm install -g @angular/cli
+
 ng new app
 cd app
 ng serve
@@ -18,3 +36,14 @@ when you want to deal value which is never changed during runtime you need to us
 interpolation 
 but if you want to change something during runtime then you must use property
 binding
+npm install jquery popper.js
+npm install bootstrap@3 (@3 is the bootstrap 3 I mean to say version.)
+ "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
