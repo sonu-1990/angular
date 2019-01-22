@@ -47,3 +47,14 @@ npm install bootstrap@3 (@3 is the bootstrap 3 I mean to say version.)
               "node_modules/popper.js/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
+            nishasingla.com/courses-ng-for
+
+structural directives
+ngIf
+ngFor
+for ngIf if you want to write else condition you need to use ng-template
+for ex.
+<h1 ngIf="isStatus; else logout">Hello</h1>
+<ng-template #logout >Bye</ng-template>
+<ng-template></ng-template> - #logout is a ng-template reference variable
+you can put ng-template anywhere.
