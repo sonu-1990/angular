@@ -30,7 +30,7 @@ template / templateUrl
 component -> view(template) (interpolation {{}} / property binding [])
 view(template) -> component (Event Binding () / Two-binding [()])
 ng generate component --spec=false(dont need a testing file) --is(inetranl style)
-
+ng generate component --spec=false -it(inline template) -is(inline style)
 What is the difference betweeen interpolation and property binding
 when you want to deal value which is never changed during runtime you need to use 
 interpolation 
