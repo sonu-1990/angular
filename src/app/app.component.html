@@ -1,3 +1,25 @@
+<h2>Select country</h2>
+<select (change)="change($event.target.value)">
+  <option>Select Country</option>
+  <option *ngFor="let c of countries" [value]="c.code">{{ c.country }}</option>
+</select>
+<br/>
+<h1>{{selectedCountryCode}}</h1>
+<div [ngSwitch] ="selectedCountryCode">
+    <div *ngSwitchCase="'Ind'" class="jumbotron">
+        Indian calling code is +91
+    </div>
+    <div *ngSwitchCase="'Uae'" class="jumbotron">
+        United Arab Emirates calling code is +380
+    </div>
+    <div *ngSwitchCase="'UK'" class="jumbotron">
+        United Kingdom calling code is +385
+    </div>
+    <div *ngSwitchDefault class="jumbotron">
+        Select Country
+    </div>
+</div>
+<br/>
 <div *ngIf="isLoggedIn; else logout">Yes logged in</div>
 <ng-template #logout>You are logged out.</ng-template><br/>
 <!-- Button trigger modal -->
