@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   template: `
     <p>
-      child works!
+      child works! {{ uname }}
     </p>
   `,
   styles: [`
@@ -14,6 +14,8 @@ import { Component, OnInit } from '@angular/core';
   `]
 })
 export class ChildComponent implements OnInit {
+  @Input()
+  uname:string;
 
   constructor() { }
 

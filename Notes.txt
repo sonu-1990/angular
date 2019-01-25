@@ -85,5 +85,11 @@ ngSwitchDefault
 </div>
 <br/>
 
+communicate from parent -> child component
+
+[uname] = username in parent 
+@Input()
+uname
+
 
 
