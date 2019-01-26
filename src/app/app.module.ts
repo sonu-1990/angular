@@ -7,6 +7,8 @@ import { BindingComponent } from './binding/binding.component';
 import { FormsModule } from '@angular/forms';
 import { ChildComponent } from './child/child.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { AgeComponent } from './pipes/age/age.component';
+import { AgecalPipe } from './pipes/agecal.pipe';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { PipesComponent } from './pipes/pipes.component';
     AppComponent,
     BindingComponent,
     ChildComponent,
-    PipesComponent
+    PipesComponent,
+    AgeComponent,
+    AgecalPipe
   ],
   imports: [
     BrowserModule,

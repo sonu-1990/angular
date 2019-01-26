@@ -128,4 +128,12 @@ Json (it is used to see the services output in json format)
 Async
 
 
+create custom Pipes
+ng g p pipes/agecal
+transform(value: any, args?: any): any {
+    return null;
+} // transform takes two argument value-value is the argument on which pipe is applied,
+args?:any - is the list of extra arguments.
+
+
 

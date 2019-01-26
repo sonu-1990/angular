@@ -7,6 +7,7 @@
       <th>City</th>
       <th>Salary</th>
       <th>Dob</th>
+      <th>Age</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@
       <td>{{u.city | lowercase}}</td>
       <td>{{u.salary | currency:'INR':'code':'3.3-3'}}</td>
       <td>{{u.DOB | date:'dd/MM/yyyy'}}</td>
+      <td>{{u.DOB | agecal}}</td>
     </tr>
   </tbody>
 </table>
