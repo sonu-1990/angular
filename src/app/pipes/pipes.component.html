@@ -1,4 +1,4 @@
-<h2>{{pageTitle | titlecase}}</h2>
+<!-- <h2>{{pageTitle | titlecase}}</h2>
 <table class="table">
   <thead class=" table-dark">
     <tr>
@@ -20,7 +20,37 @@
       <td>{{u.DOB | agecal}}</td>
     </tr>
   </tbody>
-</table>
-<pre>
+</table> -->
+<!-- <pre>
 {{users | json}}
-</pre>
+</pre> -->
+
+
+
+<h2>{{pageTitle | titlecase}}</h2>
+<table class="table">
+  <thead class=" table-dark">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <td>{{u.id}}</td>
+      <td>{{u.name | uppercase}}</td>
+      <td>{{u.username | lowercase}}</td>
+      <td>{{u.email }}</td>
+      <td>{{u.phone }}</td>
+      <td>{{u.website}}</td>
+    </tr>
+  </tbody>
+</table>
+<!-- <pre>
+{{users | json}}
+</pre> -->
+

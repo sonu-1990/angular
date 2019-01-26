@@ -10,6 +10,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { AgeComponent } from './pipes/age/age.component';
 import { AgecalPipe } from './pipes/agecal.pipe';
 import { UserService } from './services/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { UserService } from './services/user.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

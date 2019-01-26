@@ -156,6 +156,31 @@ ngOnInit() {
     this.users = this.userService.getAllUsers();
 }
 
+Dynamic data fetches 
+so search for jsonplaceholder on google for fake API
+in app.module.ts
+import { HttpClientModule } from '@angular/common/http';
+imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ],
+Then in user.services.ts
+import { HttpClient } from '@angular/common/http';
+getAllUsers() {
+    return this.http.get("https://jsonplaceholder.typicode.com/users");
+}
+and component in which we need to call this method,
+ngOnInit() {
+    //this.users = this.userService.getAllUsers();
+    this.userService.getAllUsers().subscribe((data)=>{
+      this.users = data;
+    });
+}
+
+
+
 
 
 

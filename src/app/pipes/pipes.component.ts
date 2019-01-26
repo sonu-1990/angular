@@ -11,7 +11,10 @@ export class PipesComponent implements OnInit {
   constructor(private userService:UserService) { }
 
   ngOnInit() {
-    this.users = this.userService.getAllUsers();
+    //this.users = this.userService.getAllUsers();
+    this.userService.getAllUsers().subscribe((data)=>{
+      this.users = data;
+    });
   }
   pageTitle:string="pipes in angular";
  
