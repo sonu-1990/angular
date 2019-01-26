@@ -24,4 +24,8 @@ export class AppComponent {
     this.selectedCountryCode = code;
   }
   username:string = "Sonu Pokade.";
+  receivedData:string;
+  parentMethod(receivedData) {
+    this.receivedData = receivedData;
+  }
 }

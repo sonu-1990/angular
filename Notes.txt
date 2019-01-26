@@ -86,10 +86,30 @@ ngSwitchDefault
 <br/>
 
 communicate from parent -> child component
-
 [uname] = username in parent 
 @Input()
-uname
+uname:string;
+
+If you want to send data from child component to parent component
+Then you have to use notify event
+in child component 
+@Output()
+notify:EventEmitter<string> = new EventEmitter<string>;
+in template of child component
+add button like as 
+<button (click)="passData()"></button>
+passData(){
+    this.notify.emit("This message is coming from child");
+}
+then in parent component
+subscribe notify event
+(notify) ="parentMethod($event)"
+data:string;
+parentMethod(data) {
+    this.data = data;
+}
+And then in Html 
+{{data}}
 
 
 
