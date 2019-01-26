@@ -7,13 +7,17 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./pipes.component.css']
 })
 export class PipesComponent implements OnInit {
-  users:any[];
+  users:any;
+  errorMessage:string = "Loading....";
   constructor(private userService:UserService) { }
 
   ngOnInit() {
     //this.users = this.userService.getAllUsers();
     this.userService.getAllUsers().subscribe((data)=>{
       this.users = data;
+    },(err)=> {
+      console.log(err);
+      this.errorMessage = err;
     });
   }
   pageTitle:string="pipes in angular";

@@ -156,6 +156,7 @@ ngOnInit() {
     this.users = this.userService.getAllUsers();
 }
 
+
 Dynamic data fetches 
 so search for jsonplaceholder on google for fake API
 in app.module.ts
@@ -178,6 +179,8 @@ ngOnInit() {
       this.users = data;
     });
 }
+
+Error handling
 
 
 

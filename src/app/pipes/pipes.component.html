@@ -26,7 +26,7 @@
 </pre> -->
 
 
-
+<div *ngIf="users !== undefined ;else nousers;">
 <h2>{{pageTitle | titlecase}}</h2>
 <table class="table">
   <thead class=" table-dark">
@@ -50,6 +50,10 @@
     </tr>
   </tbody>
 </table>
+</div>
+<ng-template #nousers>
+    {{errorMessage}}
+</ng-template>
 <!-- <pre>
 {{users | json}}
 </pre> -->
