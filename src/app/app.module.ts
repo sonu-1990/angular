@@ -9,6 +9,7 @@ import { ChildComponent } from './child/child.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { AgeComponent } from './pipes/age/age.component';
 import { AgecalPipe } from './pipes/agecal.pipe';
+import { UserService } from './services/user.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { AgecalPipe } from './pipes/agecal.pipe';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

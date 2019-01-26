@@ -135,5 +135,27 @@ transform(value: any, args?: any): any {
 } // transform takes two argument value-value is the argument on which pipe is applied,
 args?:any - is the list of extra arguments.
 
+Service 
+sevice is a centralized location to store data from where each and every 
+component can recieve that data. which is powerful feature of DRY(do not repeat yourself) 
+In angular constructor is used for dependency injection
+1> ng g s servies/user
+2> move to app.module.ts
+in provider array add services.and import on top as well.
+3> import { UserService } from './services/user.service';
+4> providers: [UserService]
+5> in sevices return an array of users(Whatever data you want to return) 
+from one custom method.
+6> Now go to the component in which you want to use this service
+then import service on top using import statement
+7> In constructor of that component inject that servies
+like as 
+constructor(private userService:UserService) { }
+8> Then in 
+ngOnInit() {
+    this.users = this.userService.getAllUsers();
+}
+
+
 
 
