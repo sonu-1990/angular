@@ -1,0 +1,24 @@
+<h2>{{pageTitle | titlecase}}</h2>
+<table class="table">
+  <thead class=" table-dark">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>Salary</th>
+      <th>Dob</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <td>{{u.id}}</td>
+      <td>{{u.name | uppercase}}</td>
+      <td>{{u.city | lowercase}}</td>
+      <td>{{u.salary | currency:'INR':'code':'3.3-3'}}</td>
+      <td>{{u.DOB | date:'dd/MM/yyyy'}}</td>
+    </tr>
+  </tbody>
+</table>
+<pre>
+{{users | json}}
+</pre>

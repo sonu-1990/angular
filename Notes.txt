@@ -111,5 +111,21 @@ parentMethod(data) {
 And then in Html 
 {{data}}
 
+Pipes can be of two types:
+build-in
+custom
+-----------
+Uppecase (related to string)
+Lowercase (related to string)
+titleCase (related to string) -first charactor of every word is in caps.
+Date (data:'dd/MM/YYYY')
+Currency (currency:'INR':'code':'3.3-3') Where INR is used to indicate Indian currency
+and you need to write code so that INR is not converted to symbol rather it displays code.
+Percent 
+Number
+Slice 
+Json (it is used to see the services output in json format) 
+Async
+
 
 
