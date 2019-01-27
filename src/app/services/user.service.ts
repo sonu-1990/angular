@@ -17,7 +17,7 @@ export class UserService {
     //     {id:12,name:"Rutuja", city:"Pune",salary:30000, DOB:new Date("03/03/1990")},
     //     {id:13,name:"Neha", city:"Bombay",salary:25000, DOB:new Date("05/10/1990")},
     //   ];
-    return this.http.get("https://jsonplaceholder.typicode.com/userss")
+    return this.http.get("https://jsonplaceholder.typicode.com/users")
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -34,5 +34,8 @@ export class UserService {
     }
     //window.alert(errorMessage);
     return throwError(error.status);
+  }
+  getUser(id:number){
+    return this.http.get("https://jsonplaceholder.typicode.com/users/"+id);
   }
 }

@@ -14,13 +14,16 @@
         <a class="nav-link" routerLink="/about" >About</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" routerLink="/user" >User</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" routerLink="/contact" >Contact</a>
       </li>
     </ul>
   </div>
 </nav>
   <router-outlet></router-outlet>
-<app-pipes></app-pipes>
+<!-- <app-pipes></app-pipes> -->
 <app-child [uname]="username" (notify)="parentMethod($event)"></app-child>
 <h5>{{receivedData}}</h5>
 <h2>Select country</h2>
